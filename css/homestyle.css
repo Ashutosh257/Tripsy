@@ -1,0 +1,93 @@
+body{
+	background-image: url(../fpbg.jpg);
+	background-size: cover;
+	font-family: arial;
+}
+.wrap{
+	position: absolute;
+	width: 30%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.search{
+	width: 100%;
+	alignment: right;
+}
+.fa-search{
+	position: absolute;
+	width: 50px;
+	height: 48px;
+	border: 1px solid #FA8072;
+	background-color: #FA8072;
+	
+}
+.searchterm{
+	float: left;
+	width: 100%;
+	border: 3px solid #FA8072;
+	padding: 11px;
+	font-size: 17px;
+	outline: none;
+	transition: 1s all;
+}
+.searchterm:focus {
+	color: #FA8072;
+	border: 3px solid #fff;
+}
+
+.searchbtn{
+	position: absolute;
+	width: 50px;
+	height: 48px;
+	border: 1px solid #FA8072;
+	background-color: #FA8072;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+#navbar{
+	Width: 100%
+	height: 100vh;
+}
+nav{
+	width: 100%;
+	height: 80px;
+	background-color: #0007;
+	line-height: 40px;
+}
+nav ul{
+	float: right;
+	margin-right: 30px;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	transition: 0.6s ease;
+}
+nav ul li:hover{
+	background-color: #FA8072;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 30px;
+}
+.sticky{
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+/**{
+	margin:0;
+	padding:0;
+	font-family: verdana;
+}
+.clearfix{
+	overflow: auto;
+}
+.logo{
+	margin:0;
+}*/

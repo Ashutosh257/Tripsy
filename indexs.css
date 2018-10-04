@@ -1,0 +1,97 @@
+body{
+	background-image: url(images/fpbg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	line-height: 1;
+  margin: 0;
+}
+
+
+nav,
+header,
+footer {
+  display: block;
+}
+
+left-part{
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+}
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/*############### Nav bar ############*/
+
+nav {
+  width: 100%;
+  margin: 0;
+}
+
+nav ul {
+  /*background-color: #eee;*/
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+ul.topnav li {
+  list-style: none;
+  float: left;
+}
+
+ul.topnav li.topnav-right {
+  float: right;
+}
+
+ul.topnav li a {
+  display: block;
+  text-decoration: none;
+  min-height: 16px;
+  text-align: center;
+  padding: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+
+nav ul.topnav li a:hover {
+  border-bottom: 2px solid #ffffff;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+ul.topnav li.dropdownIcon {
+  display: none;
+}
+
+
+/*body{
+  background-image: url(images/fpbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1;
+    margin: 0;
+}
+*/
