@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="indexs.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
@@ -14,11 +15,11 @@
   <div class="w3-container w3-text-white" id="urname" style="font-size: 35px">New user...
   </div>
 
-  <form name="f2" method="POST" class="w3-container w3-animate-opacity w3-round-large w3-blue w3-card-4">
+  <form name="f2" method="POST" class="w3-container w3-animate-opacity w3-round-large w3-card-4">
     <p><input type="text" name="username" id="username" style="height:3em;" class="w3-round-large w3-input " required placeholder="USERNAME"></p>
     <p><input type="email" name="email" id="email" style="height:3em;" class="w3-round-large w3-input " required placeholder="EMAIL"></p>
     <p><input type="password" name="password" style="height:3em;" class="w3-round-large w3-input" required placeholder="PASSWORD"></p>
-    <p class="w3-center"><input type="submit" name="submit" value="Sign Up" class="w3-btn w3-block w3-round-large w3-hover-orange w3-hover-text-white w3-border w3-centre" style="font-size: 25px"></p>
+    <p class="w3-center"><input type="submit" name="submit" value="Sign Up" class="w3-btn w3-text-white  w3-border w3-round" style="font-size: 25px"></p>
   </form>
   </div>
 
