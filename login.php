@@ -61,7 +61,7 @@
 					echo $_SESSION['uid'];
 					$_SESSION['username']=$rows['name'];
 					$_SESSION['password']=$rows['password'];
-					header("Location:home.php");
+					header("Location:tours.php");
 				}
 				else
 				{
