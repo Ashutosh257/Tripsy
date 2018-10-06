@@ -7,11 +7,7 @@
 <html>
 <head>
    <title></title>
-   <link rel="stylesheet" type="text/css" href="css/stylehome.css">
-      <link rel="stylesheet" type="text/css" href="css/styles.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
       
 </head>
 <body>
@@ -33,17 +29,16 @@
                   
                  if(isset($_SESSION['uid'])){
                      $str=$_SESSION['username'];
-                     echo "<li><a>Welcome $str</a>";
-                     echo "<li><a href='logout.php'><span class='glyphicon glyphicon-user'></span> Logout</a></li>";
+
+                     echo "<li style='color: white;'>Welcome $str</li>";
+                     echo "<li><a href='logout.php'>Logout</a></li>";
                    }
                  else{
                      
-                     echo "<li><a href='login.php'><span class='glyphicon glyphicon-user'></span> Login</a></li>";
+                     echo "<li><a href='login.php'>Login</a></li>";
+                     echo "<li><a href='admin.php'>Admin</a></li>";
                  }
-                     
-               ?>
-          
-               <li><a href="admin.php">Admin</a></li>
+                 ?>
             </ul>
          </div>   
       </div>

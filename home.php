@@ -15,12 +15,6 @@
       
    </head>
    <body>
-  
-   <div class="wrap">
-      <div class="search">
-         <input type="text" class="searchterm" name="search" placeholder="What are you looking for?">
-         <button type="submit" class="searchbtn"><i class="glyphicon glyphicon-search"></i></button>
-      </div>
-   </div>
+
    </body>
 </html>
