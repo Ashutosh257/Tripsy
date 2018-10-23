@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 <html>
-	<link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
 	<style type="text/css">
 		body{
 			background: url("images/fpbg.jpg") no-repeat fixed center;
