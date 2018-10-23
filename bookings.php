@@ -91,7 +91,7 @@
                     
                     
                     
-                    <td><button><a href="checkout.php" style="text-decoration:none; color:#000;">Checkout</a></button></td>
+                    <td><button><a style="text-decoration:none; color:#000;">Checkout</a></button></td>
                 </tr>
                 
                 
