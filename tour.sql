@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2018 at 02:57 PM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: Apr 04, 2019 at 02:34 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.1.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -44,6 +44,24 @@ INSERT INTO `admin_info` (`aid`, `name`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `booking`
+--
+
+CREATE TABLE `booking` (
+  `pid` int(30) NOT NULL,
+  `uid` int(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`pid`, `uid`) VALUES
+(1, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `p_info`
 --
 
@@ -60,11 +78,11 @@ CREATE TABLE `p_info` (
 --
 
 INSERT INTO `p_info` (`pid`, `name`, `descr`, `cost`, `image`) VALUES
-(1, 'Kerala', '5 Days 4 Nights', '50,000', 'kerpl2.jpg'),
-(2, 'Manali', '6 Days 5 Nights', '70,000', 'manali.jpg'),
-(3, 'Rajasthan', '3 Days 2 Nights', '30,000', 'rajpl1.jpg'),
-(4, 'Agra', '6 Days 5 Nights', '60,000', 'Agra.jpg'),
-(5, 'Delhi', '7 Days 6 Nights', '80,000', 'delhi.jpg');
+(1, 'Kerala', '5 Days 4 Nights', '50000', 'kerpl2.jpg'),
+(2, 'Manali', '6 Days 5 Nights', '70000', 'manali.jpg'),
+(3, 'Rajasthan', '3 Days 2 Nights', '30000', 'rajpl1.jpg'),
+(4, 'Agra', '6 Days 5 Nights', '60000', 'Agra.jpg'),
+(5, 'Delhi', '7 Days 6 Nights', '80000', 'delhi.jpg');
 
 -- --------------------------------------------------------
 
@@ -117,16 +135,19 @@ ALTER TABLE `user_info`
 --
 ALTER TABLE `admin_info`
   MODIFY `aid` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `p_info`
 --
 ALTER TABLE `p_info`
   MODIFY `pid` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
