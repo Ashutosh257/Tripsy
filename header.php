@@ -25,7 +25,7 @@
          </div>
          <div class="menu">
             <ul style="margin-right: -4%;">
-               <li><a href="home.php">Home</a></li>
+               <li><a href="index.php">Home</a></li>
                <li><a href="tours.php">Tours</a></li>
                <li><a href="Gallery.php">Gallery</a></li> 
                <li><a href="about.php">About Us</a></li>
