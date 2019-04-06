@@ -28,7 +28,7 @@
      
    <nav>
       <ul class="topnav" id="dropdownClick">
-      <li><a class="active" href="home.php">Home</a></li>
+      <li><a class="active" href="index.php">Home</a></li>
       <li><a href="tours.php">Tours</a></li>
       <li><a href="Gallery.php">Gallery</a></li>    
       <!-- <li><a href="tours.php">Tours</a></li> -->
