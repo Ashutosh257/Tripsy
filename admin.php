@@ -1,6 +1,7 @@
 <?php
-	include 'connect.php';
+	include 'index-header.php';
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -8,17 +9,20 @@
 	<title>Admin Login</title>
 </head>
 <link rel="stylesheet" type="text/css" href="login.css">
-<link rel="stylesheet" type="text/css" href="w3.css">
 <body>	
 	<form action="admin.php" method="post" name="Login">
 		
-			<!-- <legend><h2><u>ADMIN LOGIN</u></h2></legend> -->
 			<br>
-			<label>Username</label><br>
+			<label>Username</label>
+			<br>
+			<br>
 			<input type="text" name="username" id="username" required/><br>
-			<label>Password</label><br>
+			<br>
+			<label>Password</label>
+			<br>
+			<br>
 			<input type="Password" name="password" id="password" required/><br>
-			<input type="submit" id="Login" value="Login" class="login" name="login">
+			<input type="submit" id="Login" value="Login" class="admin-login" name="login">
 		
 	</form>
 

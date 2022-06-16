@@ -1,6 +1,5 @@
-<!-- only once -->
 <?php
-  include 'connect.php';
+   include 'connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +36,7 @@
                   
                  if(isset($_SESSION['uid'])){
                      $str=$_SESSION['username'];
-                     echo "<li><a href='bookings.php'>My Bookings</a></li>";
+                     echo "<li><a href='bookings.php'>Bookings</a></li>";
                      echo "<span style='margin-left: 15px;'></span>";
                      echo "<li class='topnav-right'><a href='logout.php'>Logout</a></li>";
                      echo "<li class='des topnav-right' style='color: white;'>Welcome $str</li>";
@@ -52,26 +51,6 @@
       
       </ul>
    </nav>
-   
-
-<div class="container-fluid">
-  <div class="frontimg row">
-     <div class="col col-sm-12">
-       <img class="my-index-logo" src="images/logo.svg">
-       <!-- <img src="images/logo1.png" alt=""> -->
-     </div>
-     <div class="tripsy row">
-      <div class="col-sm-12">
-       <h1><b>TRIPSY</b></h1>
-       <h3><b>TRAVEL & TOURISM</b></h3>
-     </div>
-     </div>
-     
-   </div>
-   <div class="btn">
-    <input type="submit" id="Login" value="EXPLORE NOW" class="login" onclick="window.location='tours.php'">
-  </div>
-</div>
    
    
    

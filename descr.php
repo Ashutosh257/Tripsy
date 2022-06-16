@@ -1,7 +1,7 @@
 <?php
 	include 'header.php';
 	$pid=$_REQUEST['pid'];
-	$uid=$_SESSION['uid'];
+	@$uid=$_SESSION['uid'];
 	$query="SELECT * FROM p_info WHERE pid='$pid'";
 	$result=mysqli_query($conn,$query);
 	$row=mysqli_fetch_array($result);
@@ -66,7 +66,7 @@
 						else
 						{
 							$message = "Booked!!!";
-							echo "<script type='text/javascript'>alert('$message');</script>";
+							echo "<script type='text/javascript'> location.href = 'bookings.php' ;</script>";
 						}
 						}		
 					}else{

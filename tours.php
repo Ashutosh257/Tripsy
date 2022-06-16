@@ -5,53 +5,64 @@
 <html>
 <head>
   <title>Tours</title>
-  <style type="text/css">
-    
-    div.hello{
-      float:left;
-      width:25%;
-      text-align:center;
-     /* margin-top:8%;*/
-      padding-bottom:30px;
-    }
 
-    img{
-      width: 275px;
-      height: 211px;
-    }
-
-  </style>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css.map">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 <body>
-  <div style="margin-top: 12%;">
-    
-  </div>
 
-<?php
+<div class="container-fluid">
+      <div class="row">
+        <div class='col-sm-1'>
 
-    
+        </div>
+    <?php
+
     $query="SELECT * FROM p_info;";
     $result=mysqli_query($conn,$query) or die('failed'.mysql_error($conn));
     $str="";
     while($rows=mysqli_fetch_array($result)) {
-      $str.="<div class='hello thumbnail w3-hover-shadow w3-animate-zoom'>";
-      $str.="<br><image src='images/".$rows['image']."'>";
-      $str.= "<font size='4'><br><br><a href='descr.php?pid=".$rows['pid']."'>".$rows['name']."</a>";
-      $str.= "<br><font size='4'><a>".$rows['descr']."</a>";
-      $str.= "<br><font size='4'><a><i class='fa fa-inr'></i> ".$rows['cost']."</a>";
-      $str.="</font></div>";
-    }
-    echo $str;
-?>
+    ?>
+    
+    
+        <div class="col-sm-3">
+          <div class='card my-card text-center'>
+            <br>
+            <image class='card-img-top my-card-image' src='<?php echo 'images/'.$rows['image']; ?>'>
+            <div class='card-body'>
+              <h5 class='card-title'>
+                <a href='descr.php?pid=<?php echo ''.$rows['pid'];?>'>
+                <?php echo "".$rows['name']; ?>
+                </a>
+              </h5>
+              <p class='card-text'> <?php echo ''.$rows['descr']; ?> 
+                <br> 
+                <i class='fa fa-inr'></i> 
+                <?php echo ''.$rows['cost'];  ?>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-sm-1'>
+            
+          </div>
+        
+        <?php  }
+        
+        ?>
+      
+
+</div>
+</div>
+
 
 </body>
 </html>

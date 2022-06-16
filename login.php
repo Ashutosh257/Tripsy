@@ -1,5 +1,5 @@
 <?php
-	include 'connect.php';
+	include 'index-header.php';
 ?>
 
 <!DOCTYPE html>

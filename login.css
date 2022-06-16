@@ -31,7 +31,7 @@ input[type=text], input[type=password] {
 }
 
 
-.login{
+.admin-login{
 	/*color: white;
 	border-radius: 4px;
 	background-color: Transparent;
@@ -54,7 +54,7 @@ input[type=text], input[type=password] {
 	cursor: pointer;
 }
 		
-.login:hover{
+.admin-login:hover{
 	 /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
 	 background-color: rgba(255,255,255, 0.3);
 	color: #FFF;

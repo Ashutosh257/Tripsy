@@ -24,23 +24,21 @@
 
 </head>
 <body>
-  <div style="margin-top: 12%;">
+  <!-- <div style="margin-top: 12%;">
     
-  </div>
-              <div id="products_box"><br>
+  </div> -->
+    
+  <div id="products_box"><br>
 
-                
-            
-           <form action="bookings.php" method="post" enctype="multipart/form-data">
-            
-              <table width="740" align="center" bgcolor="#0099CC">
-                
-                  <tr align="left">
-                      <td><b>Remove<b></td>
-                        <td><b>Package(s)</b></td>
-                        <!-- <td><b>Quantity</b></td> -->
-                        <td><b>Total Price</b></td>
-                    </tr>
+    <form action="bookings.php" method="post" enctype="multipart/form-data">   
+      <table width="740" align="center"> 
+      <!-- <table width="740" align="center" bgcolor="#0099CC">  -->
+        <tr align="left">
+            <td><b>Remove<b></td>
+            <td><b>Booking ID<b></td>
+              <td><b>Package(s)</b></td>
+              <td><b>Total Price</b></td>
+          </tr>
                     
       <?php 
       //$ip_add = getRealIpAddr();
@@ -51,8 +49,12 @@
         
         $run_price = mysqli_query($conn, $sel_price); 
         
+
+        
         while ($record=mysqli_fetch_array($run_price)){
           
+          $pro_bid = $record['bid'];
+
           $pro_id = $record['pid'];
           
           $pro_price = "select * from p_info where pid='$pro_id'";
@@ -72,44 +74,36 @@
             $total = $total + $values;        
 ?>
                     
-                    <tr>
-                      <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>"></td>
-                        
-                        <td><?php echo $product_title; ?><br><img src="images/<?php echo $product_image;  ?>" height="80" width="80"></td>
-                       
-                        
+          <tr>
+            <td><input type="checkbox" name="remove[]" value="<?php echo $pro_bid; ?>"></td>
+            <td><?php echo " ".$pro_bid; ?></td>
+              <td><?php echo $product_title; ?><br><img src="images/<?php echo $product_image;  ?>" height="80" width="80"></td>
+              <td><?php echo "<i class='fa fa-inr'></i> " . $only_price; ?></td>
+          </tr>
           
-                        
-                        <td><?php echo "<i class='fa fa-inr'></i> " . $only_price; ?></td>
-                    </tr>
-                    
-                <?php }} ?>
-
-                
-                <tr>
-                  <td colspan="2"><input type="submit" name="update" value="Update Cart"/></td>
-                    
-                    
-                    
-                    <td><button><a style="text-decoration:none; color:#000;">Checkout</a></button></td>
-                </tr>
-                
-                
-                
-                </table>
-           
-           
-           
-           </form>
+      <?php }} ?>
+    
+          <tr>
+            <td>
+              <br>
+              <br>
+            </td>
+          </tr>
+        <tr>
+          <td colspan="2"><input type="submit" name="update" value="Update Cart"/></td>
+            <td><button><a style="text-decoration:none; color:#000;">Checkout</a></button></td>
+        </tr>
+        </table>
+      </form>
 
            <div align="center" class="des">
              <b>Sub Total: </b>
-           <b><?php echo "<i class='fa fa-inr'></i>" . $total; ?></b>
+           <b class="total"><?php echo "<i class='fa fa-inr'></i> " . $total; ?></b>
            </div>
            
         <?php 
         
-        function updatecart() {
+    function updatecart() {
           
           global $conn;
         
@@ -117,7 +111,7 @@
         {
           foreach($_POST['remove'] as $remove_id)
           {
-             $delete_products = "delete from booking where pid='$remove_id'";
+             $delete_products = "delete from booking where bid='$remove_id'";
             
             $run_delete = mysqli_query($conn, $delete_products); 
             
@@ -137,7 +131,8 @@
         
         
       ?>
-    </div>
+
+   </div>
 
 </body>
 </html>
